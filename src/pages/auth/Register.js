@@ -9,7 +9,7 @@ const Register = () => {
     e.preventDefault();
 
     const config = {
-      url: "http://localhost:3000/register/complete",
+      url: process.env.REACT_APP_REGISTER_REDIRECT_URL,
       handleCodeInApp: true,
     };
 
@@ -49,7 +49,7 @@ const Register = () => {
         <div className="col-md-6 offset-md-3">
           <h4>Register</h4>
           <p>Register Form</p>
-          <ToastContainer/>
+          <ToastContainer />
           {registerForm()}
         </div>
       </div>
